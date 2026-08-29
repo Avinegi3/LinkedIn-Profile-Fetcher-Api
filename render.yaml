@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: linkedin-profile-api
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: LI_AT_COOKIE
+        sync: false
+      - key: LI_BCOOKIE
+        sync: false
+      - key: LI_BSCOOKIE
+        sync: false
+      - key: LI_LIDC
+        sync: false
+      - key: LI_JSESSIONID
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: RATE_LIMIT_WINDOW_MS
+        value: "60000"
+      - key: RATE_LIMIT_MAX
+        value: "20"

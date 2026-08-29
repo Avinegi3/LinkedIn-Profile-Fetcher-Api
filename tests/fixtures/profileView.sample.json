@@ -1,0 +1,118 @@
+{
+  "included": [
+    {
+      "entityUrn": "urn:li:fs_profile:PROFILE1",
+      "$type": "com.linkedin.voyager.identity.profile.Profile",
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "headline": "Senior Software Engineer at Acme Corp",
+      "summary": "I build things.",
+      "geoLocationName": "San Francisco Bay Area",
+      "connectionsCount": 500,
+      "profilePicture": {
+        "displayImageReference": {
+          "vectorImage": {
+            "rootUrl": "https://media.licdn.com/dms/image/profile-pic/",
+            "artifacts": [
+              { "width": 100, "height": 100, "fileIdentifyingUrlPathSegment": "100x100.jpg" },
+              { "width": 400, "height": 400, "fileIdentifyingUrlPathSegment": "400x400.jpg" }
+            ]
+          }
+        }
+      },
+      "backgroundImage": {
+        "images": [
+          {
+            "vectorImage": {
+              "rootUrl": "https://media.licdn.com/dms/image/background/",
+              "artifacts": [
+                { "width": 1128, "height": 191, "fileIdentifyingUrlPathSegment": "1128x191.jpg" }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "entityUrn": "urn:li:fs_position:POSITION1",
+      "$type": "com.linkedin.voyager.identity.profile.Position",
+      "title": "Senior Software Engineer",
+      "companyName": "Acme Corp",
+      "locationName": "San Francisco, California",
+      "description": "Working on the platform team.",
+      "timePeriod": {
+        "startDate": { "month": 3, "year": 2022 }
+      },
+      "company": {
+        "*miniCompany": "urn:li:fs_miniCompany:COMPANY1"
+      }
+    },
+    {
+      "entityUrn": "urn:li:fs_position:POSITION2",
+      "$type": "com.linkedin.voyager.identity.profile.Position",
+      "title": "Software Engineer",
+      "companyName": "Beta Inc",
+      "locationName": "Remote",
+      "timePeriod": {
+        "startDate": { "month": 6, "year": 2019 },
+        "endDate": { "month": 2, "year": 2022 }
+      }
+    },
+    {
+      "entityUrn": "urn:li:fs_miniCompany:COMPANY1",
+      "$type": "com.linkedin.voyager.identity.shared.MiniCompany",
+      "name": "Acme Corp",
+      "logo": {
+        "vectorImage": {
+          "rootUrl": "https://media.licdn.com/dms/image/company-logo/",
+          "artifacts": [{ "width": 200, "height": 200, "fileIdentifyingUrlPathSegment": "200x200.jpg" }]
+        }
+      }
+    },
+    {
+      "entityUrn": "urn:li:fs_education:EDU1",
+      "$type": "com.linkedin.voyager.identity.profile.Education",
+      "schoolName": "State University",
+      "degreeName": "Bachelor of Science",
+      "fieldOfStudy": "Computer Science",
+      "timePeriod": {
+        "startDate": { "year": 2015 },
+        "endDate": { "year": 2019 }
+      }
+    },
+    {
+      "entityUrn": "urn:li:fs_skill:SKILL1",
+      "$type": "com.linkedin.voyager.identity.profile.Skill",
+      "name": "TypeScript",
+      "endorsementCount": 42
+    },
+    {
+      "entityUrn": "urn:li:fs_skill:SKILL2",
+      "$type": "com.linkedin.voyager.identity.profile.Skill",
+      "name": "Node.js"
+    },
+    {
+      "entityUrn": "urn:li:fs_certification:CERT1",
+      "$type": "com.linkedin.voyager.identity.profile.Certification",
+      "name": "AWS Certified Solutions Architect",
+      "authority": "Amazon Web Services",
+      "licenseNumber": "ABC123",
+      "url": "https://aws.amazon.com/verification/ABC123",
+      "timePeriod": {
+        "startDate": { "month": 1, "year": 2021 }
+      }
+    },
+    {
+      "entityUrn": "urn:li:fs_language:LANG1",
+      "$type": "com.linkedin.voyager.identity.profile.Language",
+      "name": "English",
+      "proficiency": "NATIVE_OR_BILINGUAL"
+    },
+    {
+      "entityUrn": "urn:li:fs_language:LANG2",
+      "$type": "com.linkedin.voyager.identity.profile.Language",
+      "name": "Spanish",
+      "proficiency": "PROFESSIONAL_WORKING"
+    }
+  ]
+}
