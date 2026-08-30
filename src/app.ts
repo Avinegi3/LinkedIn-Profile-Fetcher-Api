@@ -12,6 +12,8 @@ import { statusRouter } from "./routes/status";
 export function createApp(): Express {
   const app = express();
 
+  app.set("trust proxy", 1);
+
   app.use(helmet());
   app.use(cors({ origin: config.corsOrigin === "*" ? true : config.corsOrigin.split(",") }));
   app.use(morgan(config.nodeEnv === "development" ? "dev" : "combined"));
